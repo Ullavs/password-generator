@@ -1,0 +1,226 @@
+:root {
+  --background-color: #ecfdf5;
+  --header-color: #2b283a;
+  --accent-color: #10b981;
+  --subtext-color: #6b7280;
+  --generate-text-color: #fff;
+  --border-color: #d5d4d8;
+  --password-background-color: #273549;
+  --password-text-color: #5def92;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1f2937;
+    --header-color: #fff;
+    --accent-color: #10b981;
+    --subtext-color: #d5d4d8;
+    --border-color: #2f3e53;
+    --password-background-color: #273549;
+    --password-text-color: #55f991;
+  }
+
+  .icon-dots-dark {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .icon-dots-light {
+    display: none;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--background-color);
+  font-family: "Inter", sans-serif;
+  padding: 4rem 1rem 1rem 1rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--header-color);
+  font-family: "Karla", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.accent {
+  color: var(--accent-color);
+  display: block;
+}
+
+.subtext {
+  color: var(--subtext-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  margin-top: 0.625rem;
+  margin-bottom: 3.1875rem;
+}
+
+.container-button-and-slider {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.generate-button {
+  color: var(--generate-text-color);
+  background-color: var(--accent-color);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding: 0.5625rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.container-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 7rem;
+  width: 100%;
+}
+
+.slider-number {
+  color: var(--accent-color);
+  font-weight: 800;
+}
+
+.slider {
+  width: 100%;
+}
+
+.passwords {
+  margin-top: 2.1875rem;
+  border-top: 1px solid var(--border-color);
+  padding: 2.1875rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.7rem;
+}
+
+.password {
+  color: var(--password-text-color);
+  background-color: var(--password-background-color);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 2rem;
+  padding: 0.25rem 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 0.375rem;
+  position: relative;
+}
+
+.password.active {
+  cursor: pointer;
+}
+
+.copy-div {
+  font-size: 0.875rem;
+  position: absolute;
+  left: 42%;
+  top: -75%;
+  color: var(--header-color);
+}
+
+.icon-dots-light {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-dots-dark {
+  display: none;
+}
+
+.icon-lightning {
+  display: inline-block;
+  margin-right: 0.9375rem;
+  vertical-align: middle;
+}
+
+@media (min-width: 40rem) {
+  body {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .container {
+    padding-top: 6.6rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtext {
+    font-size: 1.25rem;
+  }
+
+  .generate-button {
+    font-size: 1rem;
+    max-width: 15.25rem;
+    width: 100%;
+  }
+
+  .container-slider {
+    max-width: 15.25rem;
+  }
+
+  .passwords {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem 1.5rem;
+  }
+
+  .password {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .copy-div {
+    left: 42%;
+    font-size: 0.875rem;
+  }
+}

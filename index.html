@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Karla:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Generate a <span class="accent">random password</span></h1>
+        <p class="subtext">Never use an insecure password again.</p>
+      </header>
+
+      <main>
+        <div class="container-button-and-slider">
+          <button class="generate-button">
+            <img class="icon-lightning" src="icon-lightning.svg" />Generate
+            passwords
+          </button>
+          <div class="container-slider">
+            <span id="display" class="slider-number">16</span>
+            <input
+              id="length"
+              class="slider"
+              name="length"
+              type="range"
+              min="8"
+              max="24"
+              value="16"
+            />
+          </div>
+        </div>
+
+        <div class="passwords">
+          <div class="password">
+            <img class="icon-dots-light" src="icon-dots-light.svg" /><img
+              class="icon-dots-dark"
+              src="icon-dots-dark.svg"
+            />
+          </div>
+          <div class="password">
+            <img class="icon-dots-light" src="icon-dots-light.svg" /><img
+              class="icon-dots-dark"
+              src="icon-dots-dark.svg"
+            />
+          </div>
+          <div class="password">
+            <img class="icon-dots-light" src="icon-dots-light.svg" /><img
+              class="icon-dots-dark"
+              src="icon-dots-dark.svg"
+            />
+          </div>
+          <div class="password">
+            <img class="icon-dots-light" src="icon-dots-light.svg" /><img
+              class="icon-dots-dark"
+              src="icon-dots-dark.svg"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
